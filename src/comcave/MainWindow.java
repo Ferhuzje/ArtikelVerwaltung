@@ -17,7 +17,8 @@ public class MainWindow extends JFrame{
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		
-		contentPane.setBackground(Color.blue);
+		//Hintergrundfarbe setzen
+		//contentPane.setBackground(Color.blue);
 
 	}
 	
