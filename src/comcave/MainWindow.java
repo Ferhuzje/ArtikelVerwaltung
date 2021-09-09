@@ -32,6 +32,8 @@ public class MainWindow extends JFrame{
 		} catch (Exception e) {
 			 
 		}
+		//Icon des Fensters aendern
+		setIconImage(new ImageIcon(".\\images\\icon.png").getImage());
 
 	}
 	
