@@ -1,18 +1,24 @@
 package comcave;
 
+import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class MainWindow extends JFrame{
 	
-	JPanel contenPane;
+	JPanel contentPane;
 	
 	public MainWindow() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(800, 600);
 		setTitle("Artikelverwaltung V 1.0");
 		setLayout(null);
-		new MainWindow().setVisible(true);
+		
+		contentPane = new JPanel();
+		setContentPane(contentPane);
+		
+		contentPane.setBackground(Color.blue);
+
 	}
 	
 	public static void main(String[] args) {
