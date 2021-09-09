@@ -1,7 +1,12 @@
 package comcave;
 
 import java.awt.Color;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class MainWindow extends JFrame{
@@ -18,7 +23,15 @@ public class MainWindow extends JFrame{
 		setContentPane(contentPane);
 		
 		//Hintergrundfarbe setzen
-		contentPane.setBackground(Color.blue);
+		//contentPane.setBackground(Color.blue);
+		
+		//Bild auf PJPanel
+		try {
+			JLabel lblBackground = new JLabel( new ImageIcon( ImageIO.read(new File(".\\images\\bild.png"))));
+			contentPane.add(lblBackground);
+		} catch (Exception e) {
+			 
+		}
 
 	}
 	
