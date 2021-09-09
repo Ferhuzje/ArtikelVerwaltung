@@ -46,14 +46,19 @@ public class MainWindow extends JFrame{
 		menuArtikel.add(menuItemArtikelNeu);
 		menuArtikel.add(menuItemArtikelAnzeigen);
 		
+		
+		//ActionListenener
+		
+		MenuKlick klick = new MenuKlick();
+		menuItemArtikelNeu.addActionListener(klick);
+		menuItemArtikelAnzeigen.addActionListener(klick);
+		
 		//Untermenue
 		
 		menuTest = new JMenu("Test");
 		menuArtikel.add(menuTest);
 		
-		
-		
-		
+			
 	
 		//Hintergrundfarbe setzen
 		//contentPane.setBackground(Color.blue);
