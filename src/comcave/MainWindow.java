@@ -15,10 +15,13 @@ import javax.swing.JPanel;
 public class MainWindow extends JFrame{
 	
 	JPanel contentPane;
+	
 	JMenuBar menuBar;
 	JMenu menuArtikel;
 	JMenuItem menuItemArtikelNeu;
 	JMenuItem menuItemArtikelAnzeigen;
+	
+	JMenu menuTest;
 	
 	public MainWindow() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -29,12 +32,29 @@ public class MainWindow extends JFrame{
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		
+		// Menue und Menupunkte 
+		
 		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
 		menuArtikel = new JMenu("Artikel");
 		menuBar.add(menuArtikel);
 		
+		menuItemArtikelNeu = new JMenuItem("Neuen Artikel anlegen");
+		menuItemArtikelAnzeigen = new JMenuItem("Allle Artikel anzeigen");
+		
+		menuArtikel.add(menuItemArtikelNeu);
+		menuArtikel.add(menuItemArtikelAnzeigen);
+		
+		//Untermenue
+		
+		menuTest = new JMenu("Test");
+		menuArtikel.add(menuTest);
+		
+		
+		
+		
+	
 		//Hintergrundfarbe setzen
 		//contentPane.setBackground(Color.blue);
 		
