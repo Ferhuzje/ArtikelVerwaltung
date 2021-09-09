@@ -7,11 +7,18 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
 public class MainWindow extends JFrame{
 	
 	JPanel contentPane;
+	JMenuBar menuBar;
+	JMenu menuArtikel;
+	JMenuItem menuItemArtikelNeu;
+	JMenuItem menuItemArtikelAnzeigen;
 	
 	public MainWindow() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -21,6 +28,12 @@ public class MainWindow extends JFrame{
 		
 		contentPane = new JPanel();
 		setContentPane(contentPane);
+		
+		menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		menuArtikel = new JMenu("Artikel");
+		menuBar.add(menuArtikel);
 		
 		//Hintergrundfarbe setzen
 		//contentPane.setBackground(Color.blue);
