@@ -31,7 +31,7 @@ public class ArtikelAnzeigenWindow extends JFrame {
 			model = new DefaultTableModel();
 			
 			contentPane.add(scrollPane);
-		//	scrollPane.se
+		//	scrollPane.se*
 			
 			
 			
