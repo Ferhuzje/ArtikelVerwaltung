@@ -18,7 +18,7 @@ public class MenuKlick implements ActionListener {
 			
 		}
 		else if(e.getSource().equals(w.menuItemArtikelAnzeigen)) {
-			
+			new ArtikelAnzeigenWindow().setVisible(true);
 		}
 	}
 

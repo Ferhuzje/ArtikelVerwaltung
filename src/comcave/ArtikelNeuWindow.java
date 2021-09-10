@@ -25,6 +25,7 @@ public class ArtikelNeuWindow extends JFrame {
 		JPanel contentPane;
 	
 		public ArtikelNeuWindow() {
+			//DISPOSE_ON_CLOSE
 			setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 			setSize(600, 500);
 			

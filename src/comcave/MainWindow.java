@@ -12,6 +12,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
+
 //import javax.swing.*;
 
 public class MainWindow extends JFrame{
@@ -80,8 +81,12 @@ public class MainWindow extends JFrame{
 	public static void main(String[] args) {
 		// Look and Feel
 		
-//		String lookAndFeel ="javax.swing.plaf.metal.MetalLookAnd Feel";
+		//String lookAndFeel ="javax.swing.plaf.metal.MetalLookAnd Feel";
 		String lookAndFeel ="javax.swing.plaf.nimbus.NimbusLookAndFeel";
+		// external .jar eingebunden
+		//String lookAndFeel = "com.jtatto.plaf.mint.MintLookAndFeel";
+		
+		
 		try {
 			UIManager.setLookAndFeel(lookAndFeel);
 		}
