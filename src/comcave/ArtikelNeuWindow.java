@@ -1,5 +1,6 @@
 package comcave;
 
+import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.JButton;
@@ -65,6 +66,17 @@ public class ArtikelNeuWindow extends JFrame {
 			tfPreis.setFont(font);
 			tfAnzahl.setFont(font);
 			btnSpeichern.setFont(font);
+			
+			//Farbe
+			
+			Color color = new Color(0, 0, 255);
+			lblBezeichnung.setForeground(color);
+			lblPreis.setForeground(color);
+			lblAnzahl.setForeground(color);
+			
+			// Background-Farbe
+			tfBezeichnung.setBackground(color);
+			 		
 							
 			
 				
