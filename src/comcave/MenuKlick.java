@@ -14,6 +14,7 @@ public class MenuKlick implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource().equals(w.menuItemArtikelNeu)) {
+			new ArtikelNeuWindow().setVisible(true);
 			
 		}
 		else if(e.getSource().equals(w.menuItemArtikelAnzeigen)) {

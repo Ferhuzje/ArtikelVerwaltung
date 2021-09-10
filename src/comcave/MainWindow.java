@@ -48,8 +48,8 @@ public class MainWindow extends JFrame{
 		
 		
 		//ActionListenener
-		
-		MenuKlick klick = new MenuKlick();
+		 
+		MenuKlick klick = new MenuKlick(this);
 		menuItemArtikelNeu.addActionListener(klick);
 		menuItemArtikelAnzeigen.addActionListener(klick);
 		
