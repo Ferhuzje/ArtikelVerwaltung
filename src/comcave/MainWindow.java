@@ -24,7 +24,7 @@ public class MainWindow extends JFrame{
 	JMenuItem menuItemArtikelNeu;
 	JMenuItem menuItemArtikelAnzeigen;
 	
-	JMenu menuTest;
+	//JMenu menuTest;
 	
 	public MainWindow() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -82,6 +82,7 @@ public class MainWindow extends JFrame{
 		// Look and Feel
 		
 		//String lookAndFeel ="javax.swing.plaf.metal.MetalLookAnd Feel";
+		/*
 		String lookAndFeel ="javax.swing.plaf.nimbus.NimbusLookAndFeel";
 		// external .jar eingebunden
 		//String lookAndFeel = "com.jtatto.plaf.mint.MintLookAndFeel";
@@ -92,7 +93,7 @@ public class MainWindow extends JFrame{
 		}
 		catch (Exception e) {
 			System.out.println("LookAndFeel-Error");
-		}
+		}*/
 				
 		new MainWindow().setVisible(true);
 		
