@@ -58,8 +58,8 @@ public class MainWindow extends JFrame{
 		
 		//Untermenue
 		
-		menuTest = new JMenu("Test");
-		menuArtikel.add(menuTest);
+	//	menuTest = new JMenu("Test");
+	//	menuArtikel.add(menuTest);
 		
 			
 	

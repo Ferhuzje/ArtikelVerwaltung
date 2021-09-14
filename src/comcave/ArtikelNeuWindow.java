@@ -13,7 +13,6 @@ public class ArtikelNeuWindow extends JFrame {
 	
 		JLabel lblBezeichnung;
 		JLabel lblPreis;
-		JLabel lblBestand;
 		JLabel lblAnzahl;
 		
 		JTextField tfBezeichnung;
@@ -21,12 +20,12 @@ public class ArtikelNeuWindow extends JFrame {
 		JTextField tfAnzahl;
 		
 		JButton btnSpeichern;
-		
+
 		JPanel contentPane;
-	
+		JTextField tfDatum;
+		
 		public ArtikelNeuWindow() {
-			//DISPOSE_ON_CLOSE
-			setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+			setDefaultCloseOperation(DISPOSE_ON_CLOSE); // Dispose on Close, NUR das Sub-Fenster schlieﬂen
 			setSize(600, 500);
 			
 			contentPane = new JPanel();
@@ -49,15 +48,14 @@ public class ArtikelNeuWindow extends JFrame {
 			contentPane.add(tfAnzahl);
 			contentPane.add(btnSpeichern);
 			
-			lblBezeichnung.setBounds(20, 20, 100, 25);;
-			lblPreis.setBounds(20 , 55, 100, 25);
-			lblAnzahl.setBounds(20 , 90, 100, 25);
-			tfBezeichnung.setBounds(120, 20, 150, 25);
-			tfPreis.setBounds(120, 55, 100, 25);
-			tfAnzahl.setBounds(120, 90, 100, 25);
-			btnSpeichern.setBounds(120, 125, 100, 25);
-	
-			//Schrift
+			lblBezeichnung.setBounds(20, 20, 100, 25);
+			lblPreis.setBounds(20, 55, 100, 25);
+			lblAnzahl.setBounds(20, 90, 100, 25);
+			tfBezeichnung.setBounds(142, 20, 150, 25);
+			tfPreis.setBounds(142, 55, 100, 25);
+			tfAnzahl.setBounds(142, 89, 100, 25);
+			btnSpeichern.setBounds(142, 160, 100, 25);
+			
 			Font font = new Font("Calibri", Font.BOLD, 16);
 			
 			lblBezeichnung.setFont(font);
@@ -68,21 +66,23 @@ public class ArtikelNeuWindow extends JFrame {
 			tfAnzahl.setFont(font);
 			btnSpeichern.setFont(font);
 			
-			//Farbe
-			
 			Color color = new Color(0, 0, 255);
 			lblBezeichnung.setForeground(color);
 			lblPreis.setForeground(color);
 			lblAnzahl.setForeground(color);
 			
-			// Background-Farbe
-			tfBezeichnung.setBackground(color);
-			 		
-							
+			JLabel lblDatum = new JLabel("Datum");
+			lblDatum.setForeground(Color.BLUE);
+			lblDatum.setFont(new Font("Calibri", Font.BOLD, 16));
+			lblDatum.setBounds(20, 125, 100, 25);
+			contentPane.add(lblDatum);
 			
-				
-	}
-	
-
-	
+			tfDatum = new JTextField();
+			tfDatum.setFont(new Font("Calibri", Font.BOLD, 16));
+			tfDatum.setBounds(142, 124, 156, 25);
+			contentPane.add(tfDatum);
+			tfDatum.setColumns(10);
+			
+			btnSpeichern.addActionListener( new ButtonKlick(this) );
+		}
 }

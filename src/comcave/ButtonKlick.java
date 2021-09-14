@@ -1,9 +1,9 @@
 package comcave;
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.*;
+import java.util.Date;
+
 
 public class ButtonKlick implements ActionListener{
 	// 1. Datenbank-Server, Connector/Klassenbibliothek einbinden
@@ -20,33 +20,21 @@ public class ButtonKlick implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String bez = w.tfBezeichnung.getText();
-		String preis = w.tfPreis.getText();
-		String anz = w.tfAnzahl.getText();
+		double preis = Double.parseDouble( w.tfPreis.getText() );
+		int anz = Integer.parseInt( w.tfAnzahl.getText() );
+		String[] d = w.tfDatum.getText().split("\\.");
+		Date datum = new Date(
+				Integer.parseInt( d[2] ) - 1900, 
+				Integer.parseInt( d[1] ) - 1, 
+				Integer.parseInt( d[0] )
+		); // tag.monat.jahr / tt.mm.jjjj / 20.09.2021
 		
-		try {
-			String conString = "jdbc:mysql://localhost/javadb";
-			String user = "muster";
-			String password = "muster";
-			Connection con = DriverManager.getConnection(conString, user, password);
-			Statement stat = con.createStatement();
-			String sqlString = "INSERT INTO artikel (bezeichnung, preis, anzahl) VALUES('" 
-					+ bez + "', " + preis + ", " + anz + ");";
-			System.out.println(sqlString);
-			stat.execute(sqlString);
-			
-			
-			// Alle Artikel Daten abrufen 
-			sqlString = "SELECT * FROM artikel;";
-			ResultSet rs = stat.executeQuery(sqlString);
-			while(rs.next()) {
-				System.out.println( rs.getInt(1) + rs.getString(2) + rs.getDouble(3) + rs.getInt(4));
-			}
-			
-			con.close();
-		} catch (Exception e2) {
-			e2.printStackTrace();
-		}
+		Artikel artikel = new Artikel(bez, preis, anz, datum);
+		Datenbank.artikelSpeichern(artikel);
+		
+		//Datenbank.artikelSpeichern( new Artikel(w.tfBezeichnung.getText(), Double.parseDouble( w.tfPreis.getText() ), Integer.parseInt( w.tfAnzahl.getText() )) );
+		
 		
 	}
- 
+	
 }
